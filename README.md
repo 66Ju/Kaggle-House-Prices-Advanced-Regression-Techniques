@@ -38,6 +38,7 @@
 <img src="https://github.com/user-attachments/assets/fca13c80-9d33-471f-b83d-b7442cee4c8b" width="400">
 
 測試集的房價結果
+
 ![image](https://github.com/user-attachments/assets/2a350eaa-1553-4686-813b-d9f1c6ab782b)
 
 結論
