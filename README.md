@@ -35,7 +35,8 @@
 儲存預測結果至 house_predict.csv
 
 
-<img src="https://github.com/user-attachments/assets/fca13c80-9d33-471f-b83d-b7442cee4c8b" width="400">
+![image](https://github.com/user-attachments/assets/45208d17-27b3-4376-b69f-0463ea51e5b6)
+
 
 預測的房價結果
 
