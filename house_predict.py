@@ -13,8 +13,6 @@ from keras.callbacks import ModelCheckpoint
 import os
 import math
 
-os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
-
 df_train = pd.read_csv("C:/Users/penny/Downloads/train.csv")
 df_test = pd.read_csv("C:/Users/penny/Downloads/test.csv")
 
