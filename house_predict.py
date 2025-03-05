@@ -25,6 +25,7 @@ object_columns = df_train.select_dtypes(include = ['object']).columns
 
 for col in object_columns:
     df_train[col] = LabelEncoder().fit_transform(df_train[col].astype(str))
+    df_test[col] = LabelEncoder().fit_transform(df_test[col].astype(str))
 
 train_corr = df_train.select_dtypes(include = ['number']).corr()
 
@@ -115,22 +116,6 @@ for i in df_test.columns:
     if i not in high_corr:
         df_test = df_test.drop(i, axis = 1)
 
-for i in range(df_test.shape[1]):
-    total = 0
-    amount = 0
-    df_test = df_test.apply(pd.to_numeric, errors = 'coerce')
-    for j in range(df_test.shape[0]):
-        if not math.isnan(df_test.iloc[j, i]):
-            total += df_test.iloc[j, i]
-            amount += 1
-    
-    meann = total / amount if amount > 0 else 0
-    
-    for j in range(df_test.shape[0]):
-        if math.isnan(df_test.iloc[j, i]):
-            df_test.iloc[j, i] = meann
-
-pd.set_option('display.max_rows', None)
 
 X_test_dataset = df_test.values
 
@@ -144,3 +129,5 @@ with open("C:/Users/penny/Downloads/house_predict.csv", 'w') as f:
     f.write('Id,SalePrice\n')
     for i in range(len(pred)):
         f.write(str(i + 1461) + ',' + str(float(pred[i])) + '\n')
+        
+print(pred)
